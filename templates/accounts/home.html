@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}Главная{% endblock %}
+
+{% block content %}
+<div class="home-container">
+    <div class="welcome-card">
+        <h1>Добро пожаловать, {{ user.username }}!</h1>
+        <p class="user-info">Email: {{ user.email }}</p>
+        
+        <div class="user-actions">
+            <a href="{% url 'logout' %}" class="btn btn-secondary">Выйти</a>
+        </div>
+    </div>
+</div>
+{% endblock %}
